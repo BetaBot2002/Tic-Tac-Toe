@@ -29,6 +29,6 @@ Mobile View (Dark Mode):
 ![image](https://user-images.githubusercontent.com/105705266/189979560-a0c6dc56-9861-4341-b290-6922cbc623ce.png)
 
 
-<iframe src="https://betabot2002.github.io/Tic-Tac-Toe/" height="200" width="300" title="Iframe Example"></iframe>
+
 
 
