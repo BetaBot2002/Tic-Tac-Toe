@@ -22,11 +22,11 @@ After Draw (Dark Mode):
 
 Mobile View (Normal Mode):
 
-![image](https://user-images.githubusercontent.com/105705266/189958652-04534265-158f-4e1a-8438-7742a84c25ce.png)
+![image](https://user-images.githubusercontent.com/105705266/189979407-78ecca12-cdb0-4d0a-a9a9-36f96baf1a2d.png)
 
 Mobile View (Dark Mode):
 
-![image](https://user-images.githubusercontent.com/105705266/189958799-d35a0836-affe-44de-8fa4-3fdd62cbed96.png)
+![image](https://user-images.githubusercontent.com/105705266/189979560-a0c6dc56-9861-4341-b290-6922cbc623ce.png)
 
 
 
