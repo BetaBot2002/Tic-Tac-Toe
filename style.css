@@ -1,0 +1,297 @@
+@import url('//fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Source+Sans+Pro:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    
+}
+
+body{
+    background-color: rgb(0, 221, 255);
+    max-width:100vw; 
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.tictactoe{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3,1fr);
+    position: relative;
+    width:fit-content;
+    padding: 9px;
+    box-shadow: 15px 10px 10px rgb(0,0,0,0.3),-15px 10px 10px rgb(0,0,0,0.3);
+    border: 5px solid black;
+    border-radius: 20px;
+    background: rgb(228, 215, 78);
+    z-index: 1;
+}
+
+.tictactoe #box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 95px;
+    height: 95px;
+    padding: 20px;
+    margin-top: 10px;
+    margin: 2px;
+    background: rgb(224, 127, 212);
+    border: 5px solid black;
+    border-radius: 10px;
+    font-size: 90px;
+    user-select: none;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 1px 5px rgb(239, 5, 5),-2px -1px 3px rgb(17, 5, 239);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    font-family: 'Baloo Bhai 2', cursive;
+    font-weight: bolder;
+    
+}
+
+.result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:300px;
+    height: 140px;
+    font-size: 50px;
+    padding: 30px;
+    font-family: consolas;
+    background: #23cf42;
+    border: 5px solid black;
+    transition: all 0.5s;
+    transform: translate(0%,100%);
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.refresh > button{
+    padding:15px 15px ;
+    margin: 5px;
+    position: absolute;
+    top:10px;
+    transform: translate(-50%,-0);
+    border: 3px solid black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #8360c3, #2ebf91);
+    border-radius:20px ;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 1px 3px rgb(4, 4, 4),-1px -1px 3px rgb(0, 0, 0),1px 1px 3px rgb(4, 4, 4),-1px -1px 3px rgb(0, 0, 0);
+    font-family: 'Baloo Bhai 2', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+}
+
+.result > p{
+    font-weight: bold;
+}
+
+#sun{
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    top:0;
+    right: 0;
+    margin:10px;
+}
+
+#icon:hover{
+    animation: rotateicon 5s linear infinite;
+}
+@keyframes rotateicon {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#sound{
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    margin:10px;
+    transform: scale(0.9);
+}
+
+
+.playerdata1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:fit-content;
+    height: fit-content;
+    font-size: 21px;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-weight: bolder;
+    padding: 20px;
+    font-family: arial;
+    background: #2ebf91;
+    border: 5px solid black;
+    transition: all 0.5s;
+    
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    transform: translate(199%,22%);
+}
+
+.playerdata2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:fit-content;
+    height: fit-content;
+    font-size: 21px;
+    padding: 20px;
+    font-family: arial;
+    background: #2ebf91;
+    border: 5px solid black;
+    transition: all 0.5s;
+    
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    transform: translate(-199%,22%);
+}
+
+.playerdata{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:0;
+    height:0;
+    font-size: 30px;
+    padding: 20px;
+    font-family: consolas;
+    background: rgb(252, 252, 3);
+    border: 5px solid black;
+    transition: all 0.5s;
+    z-index: -1;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    transform: translate(0%,0%);
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(252, 252, 3);
+    border: 2px solid black;
+    border-radius: 50%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    cursor: pointer;
+    position: absolute;
+    top:0;
+    left: 0;
+    transform: none;
+    margin:10px;
+    min-width: 5rem;
+    min-height: 5rem;
+    font: 14px sans-serif;
+    font-weight: bolder;
+    transition: all 0.5s;
+    padding: 10px;
+}
+
+.info:hover{
+    font-size: 0px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .playerdata{
+        display: flex;
+        flex-direction: column;
+        transform: translate(0%,175%);
+        font-weight: 900;
+        width: fit-content ;
+        height: fit-content ;
+    }
+    .playerdata1,
+    .playerdata2,
+    .info{
+      display:none;
+    }
+
+    #sound{
+        display: flex;
+        position: absolute;
+        top:-1%;
+        left: 0;
+        margin: 10px;
+        width: 70px;
+        height: 70px;
+    }
+
+}
+
+@media only screen and (max-width: 542px) and (min-width:540px) {
+    .playerdata{
+        display: flex;
+        flex-direction: column;
+        transform: translate(0%,245%);
+        font-size: 15px;
+        font-weight: 900;
+        width: fit-content ;
+        height: fit-content ;
+    }
+    .playerdata1,
+    .playerdata2,
+    .info{
+      display:none;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .playerdata{
+        display: flex;
+        flex-direction: column;
+        transform: translate(0%,245%);
+        font-size: 15px;
+        font-weight: 900;
+        width: fit-content ;
+        height: fit-content ;
+    }
+    .playerdata1,
+    .playerdata2,
+    .info{
+      display:none;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .container{
+        transform: scale(0.8);
+    }
+
+}

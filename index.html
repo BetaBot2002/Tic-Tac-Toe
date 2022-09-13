@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link class="link" rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <button title="Toggle to Dark/Normal Mode" id="sun" onclick="toggle()">
+        <img id="icon" src="https://img.icons8.com/external-tulpahn-outline-color-tulpahn/50/000000/external-sun-space-tulpahn-outline-color-tulpahn.png" />
+    </button>
+
+    <div class="container">
+        <div class="info">
+            <center title="The colour represents whose turn it is" class="indicator">Turn<br>Indicator</center>
+        </div>
+        <div class="refresh">
+            <button class="rst" onclick="reset()">Reset Board</button>
+        </div>
+        <div class="result">
+            <h3 id="res"></h3>
+            <p id="playername"></p>
+        </div>
+        <div class="tictactoe">
+            <div class="b" id="box"></div>
+            <div class="b" id="box"></div>
+            <div class="b" id="box"></div>
+            <div class="b" id="box"></div>
+            <div class="b" id="box"></div>
+            <div class="b" id="box"></div>
+            <div class="b" id="box"></div>
+            <div class="b" id="box"></div>
+            <div class="b" id="box"></div>
+        </div>
+        <div class="playerdata">
+            <h3 id="player1">Player 1: O</h3>
+            <h3 id="player2">Player 2: X</h3>
+            <h3 class="turn">Turn: Player 1</h3>
+        </div>
+        <div class="playerdata1">
+            <h3 class="player1">P<br>L<br>A<br>Y<br>E<br>R<br>1<br>-------<br>O</h3>
+        </div>
+        <div class="playerdata2" >
+            <h3 class="player1">P<br>L<br>A<br>Y<br>E<br>R<br>2<br>-------<br>X</h3>
+        </div>
+    </div>
+    <button title="Mute/Unmute" id="sound" onclick="mute()">
+        <img id="music" src="https://img.icons8.com/external-others-iconmarket/64/000000/external-mute-user-experience-others-iconmarket-3.png"/>
+        <div id="temp"></div>
+    </button>
+
+    
+</body>
+
+</html>
