@@ -9,7 +9,7 @@ Dark Mode:
 ![image](https://user-images.githubusercontent.com/105705266/189956245-a7a52074-231b-4c93-91a7-ad1b03d13d52.png)
 
 After Win (Normal Mode):
-![image](https://user-images.githubusercontent.com/105705266/189956566-62a58598-f959-491e-b43a-03d779d660c6.png)
+![image](https://user-images.githubusercontent.com/105705266/189958118-6ba83e20-77eb-49e9-96a4-d546e226298f.png)
 
 After Win (Dark Mode):
 ![image](https://user-images.githubusercontent.com/105705266/189956406-290aee72-739c-495e-af5d-8c20a3737dc2.png)
