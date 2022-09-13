@@ -396,9 +396,7 @@ const reset = () => {
     console.log(isreset)
     pd2.innerHTML = '<h3 class="player1">P<br>L<br>A<br>Y<br>E<br>R<br>2<br>-------<br>X</h3>'
     pd1.innerHTML = '<h3 class="player1">P<br>L<br>A<br>Y<br>E<br>R<br>1<br>-------<br>O</h3>'
-    document.querySelector('.playerdata').innerHtml="<h3 id="player1">Player 1: O</h3>
-            <h3 id="player2">Player 2: X</h3>
-            <h3 class="turn">Turn: Player 1</h3>"
+    document.querySelector('.turn').innerText='Turn: Player 1'
     p1 = "O"
     p2 = "X"
     document.querySelector('.info').style.top = "20%"
